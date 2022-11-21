@@ -5,13 +5,11 @@ require('dotenv');
 const mysqlConnection = require("./database");
 const port = process.env.PORT || 3000;
 
-// Your github page origin has to be written EXACTLY like this! https://behu-kea.github.io
-const URL_FOR_FRONTEND = "YOUR_GITHUB_PAGE_ORIGIN_HERE";
-
-let users = require("./data"); // users array imported from data.js
-
 app.use(express.json()); //Used to parse JSON bodies
 app.use(express.urlencoded({ extended: true })); //Parse URL-encoded bodies
+
+// Your github page origin has to be written EXACTLY like this! https://behu-kea.github.io
+const URL_FOR_FRONTEND = "https://behu-kea.github.io";
 
 // If the application is running localhost allow all requests,
 // otherwise add cors for specific website
